@@ -48,7 +48,7 @@ void main() {
 
     test("When initialized current index should be 0", () {
       final mainTestModel = getModel();
-      expect(mainTestModel.currentPageIndex, 0);
+      expect(mainTestModel.currentIndex, 0);
     });
   });
 
@@ -58,7 +58,7 @@ void main() {
         () {
       final mainTestModel = getModel();
       mainTestModel.onTabTapped(4);
-      expect(mainTestModel.currentPageIndex, 4);
+      expect(mainTestModel.currentIndex, 4);
     });
 
     test("When called function should notify listeners of tab change", () {
@@ -99,7 +99,7 @@ void main() {
           fSignUp: fSignup, mainIndex: mainIndex, model: mainTestModel);
 
       expect(mainTestModel.showAppTour, fSignup);
-      expect(mainTestModel.currentPageIndex, mainIndex);
+      expect(mainTestModel.currentIndex, mainIndex);
     });
 
     test(
